@@ -1,0 +1,247 @@
+@font-face {
+  font-family: 'Days One';
+  font-style: normal;
+  font-weight: 400;
+  src: url("./fonts/mem9YaCnxnKRiYZOCIYScrg.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Jura';
+  font-style: normal;
+  font-weight: 400;
+  src: url("./fonts/z7NOdRfiaC4Vd8hhoPzfb5vBTP1d7ZumR_g.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+body {
+  background-color: black;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
+}
+
+body * {
+  box-sizing: inherit;
+}
+
+.container {
+  background-image: url( ./images/cantina.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+}
+
+.table {
+  width: 900px; 
+  max-width: calc(100% - 20px);
+  border: 8px solid rgb(10, 43, 2);
+  border-radius: 20px;
+  background: rgba(22, 77, 8, 0.432);
+  margin: 50px auto;
+  color: white;
+  font-family: Jura;
+	font-weight: 700;
+  letter-spacing: 1px;
+  padding: 0px 30px 0px 30px;
+  text-align: center;
+}
+
+.message-box {
+  width: 100%;
+  max-width: calc(100% - 20px);
+  margin: 0 auto 10px;
+  font-family: 'Days One';
+	font-size: 5.5vw;
+  color: #FFE807;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+  text-align: center;
+  flex: 1;
+}
+
+.player {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.player-name {
+  display: block;
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.hand {
+  background: rgba(10, 43, 2, 0.5);
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  min-height: 150px;
+}
+
+.hand img {
+  height: 150px;
+  padding: 10px;
+  border-radius: 15px;;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+}
+
+button, select, input {
+  margin: 10px;
+  font-size: 20px;
+  border: 0;
+  padding: 10px 16px;
+  border-radius: 10px;
+  color: #FFE807;
+  background: #000000;
+  font-family: Jura;
+	font-weight: 700;
+  letter-spacing: 1px;
+}
+
+button:hover, option:hover {
+  cursor: pointer;
+  border-color: rgb(35, 133, 199);
+  background: rgb(12, 46, 68);
+  box-shadow: 0px 0px 10px 5px rgba(35, 133, 199, 0.55);
+}
+
+select:hover {
+  cursor: pointer;
+  border-color: rgb(35, 133, 199);
+  background: rgb(12, 46, 68);
+  box-shadow: 0px 0px 10px 5px rgba(35, 133, 199, 0.55);
+}
+
+button[disabled], select[disabled] {
+  color: rgb(160, 160, 160);
+  background: rgb(71, 71, 71);
+  pointer-events: none;
+}
+
+button[disabled]:hover {
+  cursor: not-allowed;
+  background: rgb(71, 71, 71);
+  box-shadow: none;
+}
+
+button[type="reset"] {
+  color: rgb(255, 184, 184);
+  background: rgb(133, 8, 8);
+}
+
+button[type="reset"]:hover {
+  background: rgb(150, 7, 7);
+  box-shadow: 0px 0px 10px 5px rgba(150, 7, 7, 0.63);
+}
+
+.character {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0px 0px 0px;
+}
+
+.character img{
+  object-fit: contain;
+  display: none;
+}
+
+.left-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+}
+
+.middle-buttons {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.score-box {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.score-box p {
+  margin: 10px;
+}
+
+#deal-hit-button {
+  height: 150px;
+  padding: 0;
+}
+
+#deal-hit-button img {
+  border-radius: 5px;
+  height: 150px;
+}
+
+.bet-input-container {
+  display: flex;
+}
+
+.bet-input-container input {
+  width: 0px;
+  flex: 1;
+}
+
+@media screen and (min-width:995px) {
+  .message-box {
+    font-size: 55px;
+  }
+}
+@media screen and (min-width:1650px) {
+  .container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    column-gap: 150px;
+  }
+  .table {
+    height: fit-content;
+    margin: 50px;
+    order: 1;
+  }
+  .character img {
+    display: block;
+  }
+}
+
+@media screen and (max-width:800px) {
+  .container {
+    justify-content: flex-start;
+  }
+  .hand {
+    min-height: 100px;
+  }
+  .hand img {
+    height: 100px;
+  }
+  #deal-hit-button, #deal-hit-button img {
+    height: 100px;
+  }
+  .bet-input-container input{
+    font-size: 15px;
+  }
+}
